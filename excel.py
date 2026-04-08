@@ -5,7 +5,7 @@ from utils import extrair_patrimonios
 
 
 # ==================================
-# FUNÇÃO: Ler patrimônios do Excell
+# FUNÇÃO: Ler patrimônios do Excel
 # ==================================
 def carregar_patrimonios_excel(excel_file, sheet_name, coluna):
 
