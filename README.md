@@ -25,15 +25,21 @@ Com este projeto, o processo manual e demorado de conferência de inventário é
 
 ##  Estrutura do Projeto
 
+## Estrutura do Projeto
+
+```
 ProjetoInventarioINSS/
-├── config.py      # Configurações gerais
-├── main.py        # Execução principal
-├── pdf.py         # Manipulação de PDF
-├── excel.py       # Manipulação de Excel
-├── utils.py       # Funções auxiliares
 │
-├── archives/      # Arquivos de entrada (obrigatoriamente os arquivos a serem analisados devem estar aqui)
-└── output/        # Arquivos gerados (local de destino dos arquivos analisados)
+├── config.py # Configurações gerais
+├── main.py # Execução principal
+├── pdf.py # Manipulação de PDF
+├── excel.py # Manipulação de Excel
+├── utils.py # Funções auxiliares
+│
+├── archives/ # Arquivos de entrada (obrigatoriamente os arquivos a serem analisados devem estar aqui)
+└── output/ # Arquivos gerados (local de destino dos arquivos analisados)
+```
+
 ---
 
 ## Como Funciona
