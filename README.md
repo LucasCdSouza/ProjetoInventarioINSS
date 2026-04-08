@@ -26,16 +26,14 @@ Com este projeto, o processo manual e demorado de conferência de inventário é
 ##  Estrutura do Projeto
 
 ProjetoInventarioINSS/
+├── config.py      # Configurações gerais
+├── main.py        # Execução principal
+├── pdf.py         # Manipulação de PDF
+├── excel.py       # Manipulação de Excel
+├── utils.py       # Funções auxiliares
 │
-├── config.py # Configurações gerais
-├── main.py # Execução principal
-├── pdf.py # Manipulação de PDF
-├── excel.py # Manipulação de Excel
-├── utils.py # Funções auxiliares
-│
-├── archives/ # Arquivos de entrada
-├── output/ # Arquivos gerados
-
+├── archives/      # Arquivos de entrada (obrigatoriamente os arquivos a serem analisados devem estar aqui)
+└── output/        # Arquivos gerados (local de destino dos arquivos analisados)
 ---
 
 ## Como Funciona
@@ -70,6 +68,7 @@ pip install pandas openpyxl pymupdf
 ### 2. Configure os arquivos editando o "config.py" com o nome da planilha e do arquivo 
 
 PDF_FILE = "archives/ArquivosJuntos.pdf"
+
 EXCEL_FILE = "archives/INVENTÁRIO.xlsx"
 
 ### 3. Execução
