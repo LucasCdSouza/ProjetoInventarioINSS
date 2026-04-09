@@ -1,0 +1,16 @@
+# Ambiente virtual
+.venv/
+
+# Arquivos de entrada (podem ter dados sensíveis)
+archives/
+
+# Arquivos gerados automaticamente
+output/
+
+# Cache do Python
+__pycache__/
+*.pyc
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
