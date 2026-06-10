@@ -20,5 +20,5 @@ EXCEL_SAIDA = "output/INVENTARIO_ATUALIZADO_2025.xlsx"
 # Nome do arquivo PDF com os patrimônios marcados
 PDF_SAIDA = "output/INVENTARIO_ATUALIZADO_2025.pdf"
 
-# Expressão que identifica os patrimônios (9 números)
+# Expressão que identifica os patrimônios localizados (9 números)
 PATRIMONIO_REGEX = r"\b\d{9}\b"

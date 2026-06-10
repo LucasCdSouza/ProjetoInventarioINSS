@@ -6,7 +6,7 @@ from config import PATRIMONIO_REGEX
 
 
 # ==================================
-# FUNÇÃO: Extrair patrimônios
+# Função para extrair os patrimônios
 # ==================================
 # Procura números de patrimônio dentro de um texto
 def extrair_patrimonios(texto):

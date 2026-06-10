@@ -5,9 +5,10 @@ from utils import extrair_patrimonios
 fitz.TOOLS.mupdf_display_errors(False)
 
 
-# ==================================
-# FUNÇÃO: Extrair patrimônios do PDF
-# ==================================
+# ======================================
+# Função para extrair patrimônios do PDF
+# ======================================
+
 def extrair_patrimonios_pdf(pdf_file):
 
     doc = fitz.open(pdf_file)
@@ -38,8 +39,9 @@ def extrair_patrimonios_pdf(pdf_file):
 
 
 # ==================================
-# FUNÇÃO: Marcar PDF
+# Função utilizada para marcar o PDF
 # ==================================
+
 def marcar_pdf(pdf_file, set_excel, pdf_saida):
 
     doc = fitz.open(pdf_file)

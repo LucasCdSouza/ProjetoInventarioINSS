@@ -4,9 +4,9 @@ from openpyxl.styles import PatternFill
 from utils import extrair_patrimonios
 
 
-# ==================================
-# FUNÇÃO: Ler patrimônios do Excel
-# ==================================
+# ========================================================
+# Função utilizada para a leitura dos patrimônios do Excel
+# ========================================================
 def carregar_patrimonios_excel(excel_file, sheet_name, coluna):
 
     # Lê o Excel
@@ -35,9 +35,9 @@ def carregar_patrimonios_excel(excel_file, sheet_name, coluna):
     return set_patrimonios
 
 
-# ==================================
-# FUNÇÃO: Marcar Excel
-# ==================================
+# ==========================================================
+# Função utilizada para a  marcação dos patrimônios no Excel
+# ==========================================================
 def marcar_excel(excel_file, sheet_name, coluna, set_pdf, excel_saida):
 
     # Abre o Excel
@@ -49,10 +49,11 @@ def marcar_excel(excel_file, sheet_name, coluna, set_pdf, excel_saida):
     # Cor amarela
     amarelo = PatternFill(start_color="FFFF00", end_color="FFFF00", fill_type="solid")
 
+    #linha onde estão os cabeçalhos da planilha
     linha_cabecalho = 2
-    idx_col = None
+    idx_col = None 
 
-    # Descobre qual coluna é a de patrimônio
+    # Descobre qual coluna é a de patrimônio através do cabeçalho
     for col in range(1, ws.max_column + 1):
         val = ws.cell(row=linha_cabecalho, column=col).value
         if val and str(val).strip() == coluna:
@@ -65,7 +66,7 @@ def marcar_excel(excel_file, sheet_name, coluna, set_pdf, excel_saida):
     max_col = ws.max_column
     divergencias = 0
 
-    # Percorre as linhas da planilha
+    # Percorre as linhas selecionadas da planilha
     for row in range(linha_cabecalho + 1, ws.max_row + 1):
 
         valor = ws.cell(row=row, column=idx_col).value
@@ -75,12 +76,12 @@ def marcar_excel(excel_file, sheet_name, coluna, set_pdf, excel_saida):
 
         encontrado = any(p in set_pdf for p in patrimonios)
 
-        # Se não encontrou no PDF
+        # Se não encontrou no PDF e os patrimônios foram extraídos do texto, marca a linha em amarelo
         if patrimonios and not encontrado:
 
             divergencias += 1
 
-            # Marca a linha inteira
+            # Marca a linha inteira com a cor amarela
             for c in range(1, max_col + 1):
                 ws.cell(row=row, column=c).fill = amarelo
 
