@@ -1,6 +1,6 @@
-# ProjetoInventarioINSS
+# Projeto de automação de Inventario no INSS
 
-Automatizando auditorias de inventário com Python, PDF e Excel
+Sistema desenvolvido em Python com foco em automatização nas auditorias de inventário com Python, PDF e Excel.
 
 ---
 
